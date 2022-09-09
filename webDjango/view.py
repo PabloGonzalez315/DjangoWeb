@@ -1,6 +1,8 @@
 from django.http import HttpResponse
 from django.template import loader
 
+from AppCoder.views import cursos
+
 def home(self,name):
     return HttpResponse(f'hola soy la pagina Home {name}')
 
@@ -15,3 +17,5 @@ def homePage(self):
     planilla = loader.get_template('homepage.html')
     documento = planilla.render(data)
     return HttpResponse(documento)
+
+
