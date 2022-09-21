@@ -16,10 +16,9 @@ Including another URLconf
 from re import A
 from django.contrib import admin
 from django.urls import path, include
-from webDjango.view import home,homePage,cursos
+from webDjango.view import *
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', home),
-    path('homepage/', homePage),
+    path('', homepage),
     path('AppCoder/', include("AppCoder.urls"))
 ]
